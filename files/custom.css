@@ -1,0 +1,102 @@
+html { padding: 0; margin: 0; font-family: sans-serif; }
+body {
+    background-color: #008181;
+    padding: 0;
+    margin: 0;
+    background: #008181 url('../files/images/win95-wallpaper.webp');
+    background-size: cover;
+}
+
+.menu-bar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    border-top: 1px solid #A9B3B3;
+}
+
+.menu-bar {
+    height: 50px;
+    width: 100%;
+    background-color: #A9B3B3;
+    z-index: 1001;
+    border-top: 2px solid #fff;
+    box-shadow: 2px -2px 5px 2px #A9B3B3;
+}
+
+.main-body-container {
+    padding-bottom: 50px;
+}
+
+.menu-bar .main-button {
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #828282;
+    border-bottom: 2px solid #828282;
+    background-color: #c3c3c3;
+    width: 55px;
+    height: 35px;
+    margin: 0.3rem; 
+    background-image: url('../files/images/icons/windows-logo.png');
+    background-repeat: no-repeat;
+    /* background-size: 35px; */
+    background-position: 0.3rem 0.25rem;
+    font-size: 1.3rem;
+    padding-left: 2.7rem;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.menu-bar .main-button:active, .menu-bar .main-button.active {
+    border-top: 2px solid #828282;
+    border-left: 2px solid #828282;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.menu-block {
+    width: 250px;
+    height: 417px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    background-color: #BFB8BF;
+    position: absolute;
+    bottom: 3rem;
+    left: 0.3rem;
+    z-index: 1000;    
+    display: none;
+}
+
+.menu-block.active {
+    display: block;
+}
+
+.menu-block .menu-item {
+    padding: 1rem;
+    padding-left: 3rem;
+    border: 1px solid #BFB8BF;
+    border-right: 3px solid #BFB8BF;
+    background-repeat: no-repeat;
+    background-position: 0.3rem 0.7rem;
+}
+
+.menu-block .menu-item.shutdown {
+    background-image: url('../files/images/icons/shutdown.png');  
+}
+
+.menu-block .menu-item.help {
+    background-image: url('../files/images/icons/help.png');  
+}
+
+.menu-block .menu-item.gallery {
+    background-image: url('../files/images/icons/gallery.png');  
+}
+
+.menu-block .menu-item:hover {
+    cursor: pointer;
+    background-color: #00007F;
+    color: #fff;
+}
