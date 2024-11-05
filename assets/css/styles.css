@@ -1,0 +1,265 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #030c03;
+    font-size: 18px;
+}
+body { overflow-x: hidden; } 
+.main_container {
+    height: calc(100vh - 2rem); 
+    box-sizing: border-box; 
+    background-color: #030c03;
+    padding: 3rem 2rem;
+}
+
+.section_container {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: calc(100%);
+    width: 100%;
+    height: 100vh;
+    background-color: #030c03;
+    z-index: 5;
+    overflow: hidden;
+    transition: all 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+
+.main_container { 
+    display: block;
+}
+
+.section_container.active {
+    display: block;
+    left: 0;
+}
+
+.pt-mono-regular {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.orbitron-normal {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.orbitron-bold {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.header h1 { color: #51a2aa; font-size: 4rem; }
+.header h2 { color: #51a2aa; font-size: 2rem; font-family: "PT Mono", monospace; font-weight: normal; }
+.header p { color: #51a2aa; font-size: 1rem; font-family: "PT Mono", monospace; }
+
+.menu-item {
+    height: 300px;
+    width: 100%;
+    border: 2px solid #51a2aa;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    text-decoration: none;
+    color: #51a2aa;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+    z-index: 1;
+    font-family: "VT323", monospace;
+    text-align: center;
+    display: flex;
+}
+
+.menu-item .menu-item-text {
+    width: 100%;
+}
+
+.menu-item::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #51a2aa;
+    transition: .5s;
+    z-index: 2;
+}
+
+.menu-item:hover:before, .menu-item:active:before {
+    top: 0;
+}
+
+.menu-item .icon { display: block; font-size: 7rem; transition: .5s; position: relative; z-index: 3; }
+.menu-item .text { color: #51a2aa; font-size: 2rem;  transition: .5s; position: relative; z-index: 3; }
+
+.menu-item:hover .icon, .menu-item:active .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+.menu-item:hover .text, .menu-item:active .text {
+    color: #fff;
+}
+
+.toggle-fullscreen { position: fixed; top: 0.5rem; right: 1rem; color: #51a2aa; font-size: 2rem; }
+
+.section_container .section-container-box .section-container-header {
+    position: relative;
+}
+.section_container .section-container-box .section-container-header .close_section {
+    font-size: 4rem;
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    color: #51a2aa;
+}
+
+.section_container .section-container-box .section-container-content {
+    padding: 10rem 5rem 5rem 5rem;
+}
+
+.section_container .section-container-box .section-container-content h2 {
+    color: #51a2aa;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.section_container .section-container-box .section-container-content p {
+    color: #51a2aa;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.mj-photo { max-width: 450px; border-radius: 15px; }
+
+.skill-sets {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 790px;
+    margin: 1rem auto 2rem auto;
+}
+
+.skill-sets .skill {
+    width: 150px;
+    display: inline-block;
+}
+
+.skill-sets .skill img {
+    display: block;
+    max-width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.skill-sets .skill span {
+    display: block;
+    color: #51a2aa;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#projects_container { overflow-y: auto; }
+
+.gallery-item { 
+    margin-bottom: 1.5rem;
+}
+
+.gallery-item .thumb {
+    margin-bottom: 0rem;
+}
+
+.gallery-item .thumb a { 
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-item .thumb a img {
+    display: block;
+    width: 100%;
+    height: auto; 
+    border-radius: 0.5rem;
+    filter: grayscale(100%);
+}
+
+.gallery-item .thumb a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #51a2aa;
+    opacity: 0.5; /* Adjust for overlay intensity */
+    pointer-events: none; /* Ensures overlay doesn’t block image interactions */
+    transition: 0.5s;
+    border-radius: 0.5rem;
+}
+
+.gallery-item .thumb a:hover::after {
+    background: transparent;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.gallery-item .thumb a:hover img {
+    filter: grayscale(0%);
+}
+
+.gallery-item .title {
+    text-align: center;
+    font-size: 1rem !important;
+    margin-bottom: 0;
+}
+
+/* SWAL OVERRIDE */
+.swal2-confirm.swal2-styled {
+    background-color: #51a2aa;
+}
+#swal2-title { color: #51a2aa; }
+#swal2-html-container { color: #51a2aa; }
+.swal2-popup.swal2-modal {
+    border: 5px solid #51a2aa;
+    background-color: #000;
+}
+
+/* For screens 1280px and wider */
+@media only screen and (max-width: 1280px) {
+    /* Your CSS rules here */
+    body, html { font-size: 16px; }
+}
+
+/* For screens 1080px and wider */
+@media only screen and (max-width: 1080px) {
+    /* Your CSS rules here */
+    body, html { font-size: 15px; }
+}
+
+/* For screens 768px and wider */
+@media only screen and (max-width: 768px) {
+    /* Your CSS rules here */
+    body, html { font-size: 14px; }
+}
+
+/* For screens 480px and wider */
+@media only screen and (max-width: 480px) {
+    /* Your CSS rules here */
+    body, html { font-size: 13px; }
+    .menu-item { height: 150px; }
+    .menu-item .icon { font-size: 4rem; }
+    .menu-item .text { font-size: 1.3rem; }
+}
+
+/* For screens 380px and wider */
+@media only screen and (max-width: 380px) {
+    body, html { font-size: 12px; }
+}
