@@ -4198,5 +4198,33 @@
     "phone": "0428 951 763",
     "fax": "",
     "email": ""
+  },
+  {
+    "title": "Queensland Produce Distributors",
+    "description": "",
+    "street": "222 McDougall Street",
+    "city": "TOOWOOMBA",
+    "state": "QLD",
+    "postal_code": 4350,
+    "country": "Australia",
+    "lat": -27.5499325,
+    "lng": 151.9068445,
+    "phone": "07 4633 1011",
+    "fax": "",
+    "email": ""
+  },
+  {
+    "title": "Silmac Orange",
+    "description": "",
+    "street": "9 Leewood Drive",
+    "city": "TOOWOOMBA",
+    "state": "NSW",
+    "postal_code": 2800,
+    "country": "Australia",
+    "lat": -33.3084388,
+    "lng": 149.1081484,
+    "phone": "02 6362 9939",
+    "fax": "",
+    "email": ""
   }
 ]
